@@ -117,7 +117,7 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static String checkEvenOdd(Integer a) {
         String returnValue = null;
-        
+
         if(a != null){
             if(math.mod(a, 2) == 0){
                 returnValue = 'Even';
@@ -138,7 +138,19 @@ public with sharing class FlowControlLoopsCollections {
      * @return A string indicating whether the input is "Empty", "Null", or "Contains Text".
      */
     public static String checkString(String a) {
-        return null; // Replace null with the variable you used to store the result
+        String returnValue = 'Null';
+        
+
+        if(a != null){
+            if(string.isBlank(a)){
+                //system.debug('string.isBlank ' + string.isBlank(a));
+                returnValue = 'Empty';
+            }
+            else {
+                returnValue = 'Contains Text';    
+            }
+        }
+        return returnValue; // Replace null with the variable you used to store the result
     }
 
     /**

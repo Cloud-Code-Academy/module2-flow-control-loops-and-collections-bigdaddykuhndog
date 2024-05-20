@@ -166,7 +166,22 @@ public with sharing class FlowControlLoopsCollections {
      * @return The grade for the given score.
      */
     public static String determineGrade(Integer score) {
-        return null; // Replace null with the variable you used to store the result
+        String returnValue = 'F';
+
+        if(score >= 90) {
+            returnValue = 'A';
+        }
+        else if (score >= 80){
+            returnValue = 'B';
+        }
+        else if(score >= 70){
+            returnValue = 'C';
+        }
+        else if (score >= 60){
+            returnValue = 'D';
+        }
+
+        return returnValue; // Replace null with the variable you used to store the result
     }
 
 
